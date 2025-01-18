@@ -1,0 +1,76 @@
+section .class {
+    display: flex;
+}
+
+nav {
+    background-color: rgb(25, 0, 255);
+    /* Keep this as is */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-inline-start: 0px;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+    /* Keep this as is */
+}
+
+nav li a {
+    color: #fff;
+    /* Change to white for better contrast */
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Add transform to transition */
+}
+
+nav li:hover a {
+    background-color: #949292b4;
+    transform: scale(1.05);
+    border: 1px solid #fff;
+    /* Change border color to white */
+    font-weight: bold;
+    /* Use font-weight instead of font: bolder */
+    color: rgb(25, 0, 255);
+    /* Invert color for better contrast */
+}
+
+/* Add a reset for default list styles */
+li {
+    list-style: none;
+    /* Remove default bullet points */
+}
+
+nav .active {
+    background-color: rgb(100, 84, 245);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: blue;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+
+span {
+    padding: 100px 0px 0px;
+    font-size: xx-large;
+}
