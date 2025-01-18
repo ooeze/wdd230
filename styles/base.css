@@ -1,4 +1,7 @@
-section .class {
+body{
+    font-family: 'Roboto', sans-serif; /* Primary font */
+
+} .class {
     display: flex;
 }
 
