@@ -46,6 +46,19 @@ nav li a {
     /* Add transform to transition */
 }
 
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
 nav li:hover a {
     background-color: #949292b4;
     transform: scale(1.05);
@@ -79,6 +92,7 @@ main img {
     display: block;
     object-fit: cover;
     justify-content: center; 
+    position: relative;
 }
 
 iframe {
