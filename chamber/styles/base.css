@@ -127,15 +127,15 @@ nav a:hover {
 
 /* Hero Section */
 #himage {
-    width: 100%;
-    height: 100vh; /* Ensures it covers the full viewport height */
+    width: auto;
+    height: auto; /* Ensures it covers the full viewport height */
     display: flex;
     justify-content: center;
-    align-items: center;
     background: url("images/812D985E-2A66-46BA-80C6-73FEF87359DF-scaled.jpeg") no-repeat center center/cover;
-    background-size: cover; /* Ensures the image covers the full section */
+    object-fit: cover; /* Ensures the image covers the full section */
     position: relative;
     margin-top: 70px; /* Adjust based on header height */
+    padding-bottom: 30px;
 }
 
 .hero h1 {
