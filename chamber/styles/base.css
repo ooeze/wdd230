@@ -1,219 +1,78 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
-
-* {
-    box-sizing: inherit;
-}
-
-/* Header */
 header {
     background-color: #333;
-    color: white;
-    padding: 20px 30px;
+    color: #fff;
+    padding: 20px 0;
+}
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
 }
-
+.logo img {
+    width: 50px;
+}
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
 }
-
 nav ul li {
-    margin: 0 20px;
+    display: inline;
+    margin: 0 10px;
 }
-
-nav a {
-    color: white;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
 }
-
-nav a:hover {
-    color: #ff6347; /* Hover effect */
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-    background: url("images/812D985E-2A66-46BA-80C6-73FEF87359DF-scaled.jpeg") no-repeat center center/cover;
-    background-size: cover; /* Ensures the image covers the full section */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 48px;
-    font-weight: 700;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    margin: 0;
-}
-
-/* Call to Action (CTA) */
-#cta {
-    text-align: center;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    width: 80%;
-    margin: -50px auto 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 15px 30px;
+.join-button {
+    background-color: #ff5733;
+    color: #fff;
     border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s ease;
+    padding: 10px 20px;
+    cursor: pointer;
 }
-
-.cta-button:hover {
-    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Hover effect */
+.main {
+    margin: 20px;
 }
-
-/* Main Content Section */
-.container {
+.hero img {
+    width: 100%;
+    height: auto;
+}
+.info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.events, .weather {
+    background-color: #fff;
     padding: 20px;
-    width: 90%;
-    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Event & Weather Sections */
-#events, #weather {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Event Section */
-#events ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#events ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
-    text-align: center;
-}
-
-#events ul li:last-child {
-    border-bottom: none;
-}
-
-/* Weather Card */
-.weather-card {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Spotlight Businesses Section */
-#company-spotlights {
-    width: 100%;
-    margin-top: 20px;
+.businesses {
     display: flex;
-    text-align: center;
+    justify-content: space-around;
+    margin: 20px 0;
 }
-
-.spotlight-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.spotlight {
-    background-color: white;
+.business {
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
-    min-height: 120px;
-    text-align: center;
-    margin: 10px;
+    box-sizing: border-box;
 }
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.contact-info, .footer-note {
+    background-color: #fff;
     padding: 20px;
-    margin-top: 20px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-        top: 20%;
-    }
-
-    .cta-button {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-
-    .spotlight {
-        width: 45%;
-    }
-
-    .weather-card {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
-        top: 15%;
-    }
-
-    .cta-button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .spotlight {
-        width: 100%;
-    }
-
-    .weather-card {
-        width: 90%;
-    }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
