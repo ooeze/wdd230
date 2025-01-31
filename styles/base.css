@@ -1,9 +1,16 @@
 body{
     font-family: 'Roboto', sans-serif; /* Primary font */
 
-} .class {
+} 
+
+.class {
     display: flex;
 }
+
+h2{
+
+}
+
 
 nav {
     background-color: rgb(25, 0, 255);
@@ -76,11 +83,11 @@ main img {
 
 iframe {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     justify-content: center;
-    padding: 20px 10px 10px 10px;
+    padding:  ;
 }
 
 footer {
