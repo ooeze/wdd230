@@ -1,13 +1,90 @@
-/* General Styles */
-* {
+/* Reset or Normalize CSS */
+
+/* Apply a simple CSS reset to remove default margin, padding, and borders */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+/* Normalize for better cross-browser consistency */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+/* Remove the default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Set images to be responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove default form element styles */
+input,
+button,
+select,
+textarea {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/* Standardize button appearance */
+button {
+    cursor: pointer;
+}
+
+/* Avoid strange spacing on tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Make sure inputs look consistent */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Make sure headings and paragraphs have consistent spacing */
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 1em;
+}
+
+/* General Styles */
+body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+* {
     box-sizing: inherit;
 }
 
