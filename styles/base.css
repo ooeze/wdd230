@@ -66,6 +66,23 @@ nav .active {
     }
 }
 
+main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    justify-content: center; 
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    justify-content: center;
+    padding: 20px 10px 10px 10px;
+}
+
 footer {
     background-color: blue;
     text-align: center;
