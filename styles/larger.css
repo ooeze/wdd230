@@ -35,3 +35,69 @@ h2 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+
+/* Add to base.css or larger.css */
+
+/* Nav Styles */
+nav {
+    background-color: rgb(25, 0, 255);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-inline-start: 0px;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+}
+
+nav li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav li:hover a {
+    background-color: #949292b4;
+    transform: scale(1.05);
+    border: 1px solid #fff;
+    font-weight: bold;
+    color: rgb(25, 0, 255);
+}
+
+nav .active {
+    background-color: rgb(100, 84, 245);
+}
+
+/* Overlay Styles */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: blue;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+
+span {
+    padding: 100px 0px 0px;
+    font-size: xx-large;
+}
