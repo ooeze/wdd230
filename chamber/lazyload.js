@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll("[data-src]");
 
     const imgOptions = {
@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         image.setAttribute("src", image.getAttribute("data-src"));
         image.onload = () => {
             image.removeAttribute("data-src");
-            image.classList.add("loaded");
         };
     };
 
