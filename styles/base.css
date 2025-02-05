@@ -317,3 +317,80 @@ img {
         display: none !important;
     }
 }
+
+/* Dark Mode Button */
+.dark-mode-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-button:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+body.darkMode {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Header Dark Mode */
+body.darkMode header {
+    background: linear-gradient(135deg, #000066 0%, #000099 100%);
+}
+
+/* Navigation Dark Mode */
+body.darkMode nav {
+    background-color: #000033;
+}
+
+body.darkMode nav a {
+    color: #fff;
+}
+
+body.darkMode nav a:hover {
+    background-color: #000066;
+}
+
+/* Content Dark Mode */
+body.darkMode .card,
+body.darkMode .card1 {
+    background-color: #2d2d2d;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.darkMode a {
+    color: #66b3ff;
+}
+
+body.darkMode a:hover {
+    color: #99ccff;
+}
+
+body.darkMode .hero .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Dark Mode */
+body.darkMode footer {
+    background-color: #000066;
+}
+
+/* Dark Mode Transitions */
+body,
+header,
+nav,
+.card,
+.card1,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
