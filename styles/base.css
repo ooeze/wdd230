@@ -394,3 +394,181 @@ nav,
 footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Root Variables */
+:root {
+    --primary-color: #1900ff;
+    --secondary-color: #f4f4f4;
+    --accent-color: #0066cc;
+    --text-color: #333;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Specific Styles */
+.form-main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-main h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input {
+    padding: 0.8rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(25, 0, 255, 0.1);
+}
+
+input:invalid {
+    border-color: var(--error-color);
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    width: 100%;
+    margin: 1rem 0;
+    background: var(--secondary-color);
+    height: 8px;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Error Message Styling */
+.error {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-color);
+}
+
+/* Confirmation Page Styling */
+.confirmation-main {
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.confirmation-main h1 {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        padding: 0.6rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+
+    .form-main,
+    .confirmation-main {
+        background-color: #2d2d2d;
+        color: white;
+    }
+
+    input {
+        background-color: #333;
+        color: white;
+        border-color: #444;
+    }
+
+    input:focus {
+        border-color: var(--accent-color);
+    }
+
+    label {
+        color: white;
+    }
+}

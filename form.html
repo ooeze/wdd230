@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Application Form | WDD 230</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development - Account Application Form">
+    <meta name="author" content="Okoro Ezenwa Omaka">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/myphoto.jpg" alt="Okoro Ezenwa Omaka" width="200" height="200">
+        <span>Okoro Ezenwa Omaka</span>
+        <button id="darkMode" class="dark-mode-button" aria-label="Toggle Dark Mode">
+            🌞
+        </button>
+    </header>
+
+    <nav>
+        <button id="menu" aria-label="Menu" aria-expanded="false">
+            <span id="hamburger">≡</span>
+            <span id="close" class="hidden">✕</span>
+        </button>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="site-plan.html">Site Plan</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main class="form-main">
+        <h1>Account Application</h1>
+        <form method="get" action="record.html">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$"
+                    title="Password must be at least 8 characters long and contain only letters and numbers">
+            </div>
+
+            <div class="form-group">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" id="password2" name="password2" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+                    title="Please enter a valid BYUI email address">
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Page Rating: <span id="ratingValue">5</span></label>
+                <input type="range" id="rating" name="rating" min="1" max="10" value="5" step="1">
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Okoro Ezenwa Omaka</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script>
+        // Range value display
+        const rating = document.getElementById('rating');
+        const ratingValue = document.getElementById('ratingValue');
+        rating.addEventListener('input', () => {
+            ratingValue.textContent = rating.value;
+        });
+
+        // Form validation
+        function validateForm() {
+            const password1 = document.getElementById('password');
+            const password2 = document.getElementById('password2');
+            const errorSpan = document.getElementById('passwordError');
+
+            if (password1.value !== password2.value) {
+                errorSpan.textContent = "Passwords do not match";
+                password1.value = '';
+                password2.value = '';
+                password1.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

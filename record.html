@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Confirmation | WDD 230</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development - Form Submission Confirmation">
+    <meta name="author" content="Ezenwa Omaka Okoro">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/myphoto.jpg" alt="Ezenwa Omaka Okoro" width="200" height="200">
+        <span>Ezenwa Omaka Okoro</span>
+        <button id="darkMode" class="dark-mode-button" aria-label="Toggle Dark Mode">
+            🌞
+        </button>
+    </header>
+
+    <nav>
+        <button id="menu" aria-label="Menu" aria-expanded="false">
+            <span id="hamburger">≡</span>
+            <span id="close" class="hidden">✕</span>
+        </button>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main class="confirmation-main">
+        <h1>Thank You!</h1>
+        <div class="confirmation-message">
+            <p>Your application has been successfully submitted.</p>
+            <p>We have received your information and will process it shortly.</p>
+        </div>
+        <a href="index.html" class="home-button">Return to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Ezenwa Omaka Okoro </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkMode.js"></script>
+</body>
+
+</html>
