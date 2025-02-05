@@ -255,80 +255,65 @@ img {
 }
 
 /* Hamburger Menu Styles */
+#menu-container {
+    background-color: #1900ff;
+    position: relative;
+    width: 100%;
+}
+
 #menu {
     display: none;
+    font-size: 2rem;
+    padding: 0.5rem 0.75rem;
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
-    padding: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    z-index: 100;
 }
 
-#hamburger,
-#close {
-    display: block;
-    transition: transform 0.3s ease;
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#close {
-    font-size: 1.8rem;
-    /* Slightly smaller X */
-    font-weight: bold;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* Mobile View */
+/* Mobile View Styles */
 @media (max-width: 768px) {
     #menu {
         display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        padding: 0.5rem 0.7rem;
-    }
-
-    #menu:hover {
-        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .navigation {
         display: none;
+        flex-direction: column;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     .navigation.responsive {
         display: flex;
-        flex-direction: column;
     }
 
-    nav {
-        position: relative;
-        padding-top: 3rem;
-        /* Make room for the hamburger button */
-    }
-
-    nav ul li {
-        display: block;
+    .navigation li {
         width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navigation li a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #close {
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none !important;
     }
 }

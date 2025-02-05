@@ -12,15 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuButton.setAttribute('aria-expanded', 'false');
     };
 
-    // Toggle menu when hamburger/close button is clicked
+    // Function to open menu
+    const openMenu = () => {
+        navigation.classList.add('responsive');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
+    };
+
+    // Toggle menu when button is clicked
     menuButton.addEventListener('click', () => {
         if (navigation.classList.contains('responsive')) {
             closeMenu();
         } else {
-            navigation.classList.add('responsive');
-            hamburgerIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
-            menuButton.setAttribute('aria-expanded', 'true');
+            openMenu();
         }
     });
 
@@ -33,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close menu when clicking a nav link
     navigation.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            closeMenu();
-        });
+        link.addEventListener('click', closeMenu);
     });
 });
