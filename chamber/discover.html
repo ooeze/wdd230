@@ -1,23 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoro Ezenwa Omaka - WDD 230 - Web Frontend Development - Chamber of Commerce and Discover</title>
+    <title>Okoro Ezenwa Omaka - WDD 230 - Web Frontend Development</title>
     <meta name="description"
-        content="WDD 230', Okoro Ezenwa Omaka, web frontend development concepts and techniques. This page provides access to course assignments and resources for students.">
+        content="Discover the local attractions, events, and community highlights of our Chamber of Commerce. View our photo gallery showcasing the best of our area.">
     <meta name="author" content="Ezenwa Omaka Okoro">
+
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto&display=swap"
         rel="stylesheet">
+
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/normalize.css">
+
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/visitCounter.js" defer></script>
+    <script src="scripts/lazyload.js" defer></script>
 
     <!-- Open Graph Meta Properties -->
     <meta property="og:title" content="Okoro Ezenwa Omaka - WDD 230 - Web Frontend Development">
@@ -25,65 +31,111 @@
     <meta property="og:image"
         content="https://i0.wp.com/ijeawele.com/wp-content/uploads/2022/12/812D985E-2A66-46BA-80C6-73FEF87359DF-scaled.jpeg?resize=840%2C473&ssl=1">
     <meta property="og:url" content="https://ijeawele.com/best-days-to-shop-in-aba-markets/">
-    <meta property="og:title" content="The Church of Jesus Christ of Latter-day Saints">
-    <meta property="og:description"
-        content="Official website of The Church of Jesus Christ of Latter-day Saints. Find messages of Christ to uplift your soul and invite the Spirit.">
-    <meta property="og:image"
-        content="https://assets.ldscdn.org/0d/7b/0d7bb93794eb11ecb29ceeeeac1ee20345ef0d4f/church_logo.png">
-    <!-- Alternative image -->
-    <meta property="og:image"
-        content="https://brightspot-assets.churchofjesuschrist.org/dims4/default/f1954e9/2147483647/strip/false/crop/1932x1017+0+0/resize/1280x674!/format/jpg/quality/90/?url=https%3A%2F%2Fassets.churchofjesuschrist.org%2F31%2F72%2F3172a0b72dcf43c62af65bf2e514b50b9900b2fe%2Fjesus_christ_healing_people.jpeg">
-    <meta property="og:url" content="https://churchofjesuschrist.org">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Learn about web frontend development and chamber projects.">
 </head>
 
 <body>
     <header>
-        <img src="images/myphoto.jpg" alt="Ezenwa" width="200" height="200" loading="lazy">
+        <img src="images/myphoto.jpg" alt="Ezenwa Omaka Okoro" width="200" height="200" loading="lazy">
         <span>Okoro Ezenwa Omaka</span>
     </header>
-    <nav>
+
+    <nav aria-label="Main Navigation">
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="https://ooeze.github.io/wdd230/chamber/">Chamber</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="https://ooeze.github.io/wdd230/chamber/">Chamber</a></li>
             <li><a href="site-plan.html">Site Plan</a></li>
             <li><a href="contact.html">Form</a></li>
         </ul>
     </nav>
-    <main>
 
-        <div class="container">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <h2>Welcome!</h2>
-                <div id="visitMessage"></div>
+    <main class="container">
+        <aside class="sidebar">
+            <h2>Chamber Information</h2>
+            <div id="visitMessage" class="visit-message">
+                <!-- Visit message will be inserted here by JavaScript -->
+            </div>
+
+            <!-- Demographics Section -->
+            <section class="sidebar-section">
+                <h3>Demographics</h3>
                 <ul>
-                    <li><strong>Attractions</strong>: Local parks, historical sites</li>
-                    <li><strong>Events</strong>: Check our events calendar</li>
-                    <li><strong>Statistics</strong>: Local population and growth</li>
+                    <li>Population: 534,265</li>
+                    <li>Median Age: 32</li>
+                    <li>Households: 156,780</li>
+                    <li>Median Income: ₦2.5M/year</li>
                 </ul>
-            </aside>
+            </section>
 
-            <!-- Main Content -->
-            <main class="main-content">
-                <h1>Local Photos of Interest</h1>
-                <div class="photo-gallery">
-                    <img class="lazy" data-src="images/" alt="Local Park" width="300" height="200">
-                    <img class="lazy" data-src="images/photo2.jpg" alt="Local Event" width="300" height="200">
-                    <img class="lazy" data-src="images/.jpg" alt="Historical Site" width="300" height="200">
-                    <img class="lazy" data-src="images/photo4.jpg" alt="Community Center" width="300" height="200">
-                    <img class="lazy" data-src="images/photo5.jpg" alt="City View" width="300" height="200">
-                    <img class="lazy" data-src="images/photo6.jpg" alt="Park Landscape" width="300" height="200">
+            <!-- Business Statistics -->
+            <section class="sidebar-section">
+                <h3>Business Statistics</h3>
+                <ul>
+                    <li>Registered Businesses: 12,450</li>
+                    <li>Major Industries: Manufacturing, Trade, Technology</li>
+                    <li>Employment Rate: 68%</li>
+                </ul>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section class="sidebar-section">
+                <h3>Upcoming Events</h3>
+                <div class="event-list">
+                    <p><strong>Dec 15</strong> - Business Networking Mixer</p>
+                    <p><strong>Dec 20</strong> - Holiday Market Festival</p>
+                    <p><strong>Jan 5</strong> - New Year Business Forum</p>
                 </div>
-            </main>
-        </div>
+            </section>
+        </aside>
 
-        <footer>
-            <p>©️2025 Ezenwa Omaka Okoro 🗺️ Aba, Nigeria</p>
-            <p id="lastModified"></p>
-            <p>&copy; <span id="currentyear"></span> All Rights Reserved.</p>
+        <section class="main-content">
+            <h2>Local Photos of Interest</h2>
 
-        </footer>
+            <div class="photo-gallery">
+                <figure class="gallery-item">
+                    <img src="images/art.webp" data-src="images/art.webp" alt="Local Art Display" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Local Art Exhibition - Showcasing Aba's Creative Talent</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/car.webp" data-src="images/car.webp" alt="Modern Transportation" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Modern Transportation in Aba's Business District</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/dance.jpg" data-src="images/dance.jpg" alt="Cultural Dance Performance" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Traditional Dance Performance - Celebrating Our Heritage</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/pizza.webp" data-src="images/pizza.webp" alt="Local Cuisine" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Local Cuisine - A Taste of Aba's Food Scene</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/shop.webp" data-src="images/shop.webp" alt="Shopping Center" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Modern Shopping Center - Retail Excellence in Aba</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/tech.webp" data-src="images/tech.webp" alt="Technology Hub" width="300"
+                        height="200" loading="lazy">
+                    <figcaption>Technology Hub - Innovation and Progress in Aba</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©️2025 Ezenwa Omaka Okoro 🗺️ Aba, Nigeria</p>
+        <p id="lastModified"></p>
+        <p>&copy; <span id="currentyear"></span> All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>

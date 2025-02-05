@@ -1,6 +1,4 @@
-/* Reset or Normalize CSS */
-
-/* Apply a simple CSS reset to remove default margin, padding, and borders */
+/* Reset and Base Styles */
 *,
 *::before,
 *::after {
@@ -9,90 +7,24 @@
     box-sizing: border-box;
 }
 
-/* Normalize for better cross-browser consistency */
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.5;
-    background-color: #f4f4f4;
-}
-
-/* Remove the default list styles */
-ul,
-ol {
-    list-style: none;
-}
-
-/* Remove default link styling */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Set images to be responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Remove default form element styles */
-input,
-button,
-select,
-textarea {
-    font: inherit;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-
-/* Standardize button appearance */
-button {
-    cursor: pointer;
-}
-
-/* Avoid strange spacing on tables */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-/* Make sure inputs look consistent */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-/* Make sure headings and paragraphs have consistent spacing */
-h1, h2, h3, h4, h5, h6, p {
-    margin-bottom: 1em;
-}
-
-/* General Styles */
-body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-* {
-    box-sizing: inherit;
-}
-
-/* Header */
+/* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,6 +35,18 @@ header {
     z-index: 1000;
 }
 
+header img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -122,134 +66,116 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff6347; /* Hover effect */
+    color: #4CAF50;
 }
 
-/* Hero Section */
-#himage {
-    width: auto;
-    height: auto; /* Ensures it covers the full viewport height */
-    display: flex;
-    justify-content: center;
-    background: url("images/812D985E-2A66-46BA-80C6-73FEF87359DF-scaled.jpeg") no-repeat center center/cover;
-    object-fit: cover; /* Ensures the image covers the full section */
-    position: relative;
-    margin-top: 70px; /* Adjust based on header height */
-    padding-bottom: 30px;
+nav .active a {
+    color: #4CAF50;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 48px;
-    font-weight: 700;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    margin: 0;
-}
-
-/* Call to Action (CTA) */
-#cta {
-    text-align: center;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    width: 80%;
-    margin: -50px auto 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button {
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Hover effect */
-}
-
-/* Main Content Section */
+/* Main Container Layout */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     padding: 20px;
-    width: 90%;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 70px auto 0;
 }
 
-/* Event & Weather Sections */
-#events, #weather {
-    width: 100%;
-    margin-bottom: 20px;
+/* Sidebar Styles */
+.sidebar {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-/* Event Section */
-#events ul {
+.visit-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border-left: 4px solid #4CAF50;
+    font-size: 1.1rem;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-section ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-#events ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
-    text-align: center;
+.sidebar-section li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #eee;
 }
 
-#events ul li:last-child {
-    border-bottom: none;
+.event-list p {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+    border-radius: 4px;
 }
 
-/* Weather Card */
-.weather-card {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Spotlight Businesses Section */
-#company-spotlights {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    text-align: center;
-}
-
-.spotlight-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.spotlight {
+/* Main Content Area */
+.main-content {
     background-color: white;
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-height: 120px;
-    text-align: center;
-    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* Photo Gallery Styles */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.gallery-item {
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item figcaption {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+/* Footer Styles */
 footer {
     background-color: #222;
     color: white;
@@ -258,43 +184,53 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
-        top: 20%;
+/* Responsive Design - Tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: 300px 1fr;
     }
 
-    .cta-button {
-        font-size: 16px;
-        padding: 12px 24px;
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .spotlight {
-        width: 45%;
-    }
-
-    .weather-card {
-        width: 80%;
+    .sidebar {
+        position: sticky;
+        top: 90px;
+        height: fit-content;
     }
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
-        top: 15%;
+/* Responsive Design - Desktop */
+@media screen and (min-width: 1024px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .cta-button {
-        font-size: 14px;
-        padding: 10px 20px;
+    nav ul li {
+        margin: 10px 0;
     }
 
-    .spotlight {
-        width: 100%;
+    header {
+        flex-direction: column;
+        padding: 15px;
     }
 
-    .weather-card {
-        width: 90%;
+    .container {
+        padding: 10px;
+        margin-top: 120px;
+        /* Adjusted for taller mobile header */
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
     }
 }

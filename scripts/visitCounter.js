@@ -38,31 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Local Storage Implementation for Visit Message
-document.addEventListener("DOMContentLoaded", function () {
-    const visitMessage = document.getElementById('visitMessage');
-    const lastVisit = localStorage.getItem('lastVisit');
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the visit message element
+    const visitMessage = document.getElementById("visitMessage");
 
-    const currentDate = new Date();
-    const currentTime = currentDate.getTime();
+    // Get the current date in milliseconds
+    const currentDate = Date.now();
+
+    // Get the last visit date from localStorage
+    const lastVisit = localStorage.getItem("lastVisit");
 
     if (!lastVisit) {
-        localStorage.setItem('lastVisit', currentTime);
-        visitMessage.innerHTML = "Welcome! Let us know if you have any questions.";
+        // First visit
+        visitMessage.textContent = "Welcome! Let us know if you have any questions.";
     } else {
-        const lastVisitDate = new Date(parseInt(lastVisit));
-        const timeDifference = currentTime - lastVisitDate.getTime();
-        const oneDay = 24 * 60 * 60 * 1000;
-        const daysDifference = Math.floor(timeDifference / oneDay);
+        const daysBetween = Math.floor((currentDate - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
 
-        if (daysDifference < 1) {
-            visitMessage.innerHTML = "Back so soon! Awesome!";
+        if (daysBetween < 1) {
+            visitMessage.textContent = "Back so soon! Awesome!";
         } else {
-            const dayText = daysDifference === 1 ? "day" : "days";
-            visitMessage.innerHTML = `You last visited ${daysDifference} ${dayText} ago.`;
+            visitMessage.textContent = `You last visited ${daysBetween} ${daysBetween === 1 ? 'day' : 'days'} ago.`;
         }
-
-        // Update last visit date
-        localStorage.setItem('lastVisit', currentTime);
     }
+
+    // Store the current visit date
+    localStorage.setItem("lastVisit", currentDate);
 });
 
