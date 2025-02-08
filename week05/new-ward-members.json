@@ -1,0 +1,28 @@
+{
+    "familyName": "Okoro",
+    "moveInDate": "2023-10-15",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Ezenwa Omaka Okoro",
+            "gender": "Male",
+            "birthdate": "1980-05-12"
+        },
+        {
+            "name": "Chidinma Omaka Okoro",
+            "gender": "Female",
+            "birthdate": "1982-07-19"
+        },
+        {
+            "name": "Emily Okoro",
+            "gender": "Female",
+            "birthdate": "2010-09-30"
+        },
+        {
+            "name": "Michael Okoro",
+            "gender": "Male",
+            "birthdate": "2012-11-22"
+        }
+    ]
+}
