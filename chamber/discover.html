@@ -35,25 +35,23 @@
 </head>
 
 <body>
-    <header>
-        <img src="images/myphoto.jpg" alt="Ezenwa Omaka Okoro" width="200" height="200" loading="lazy">
-        <span>Okoro Ezenwa Omaka</span>
+    <header class="discover-header">
+        <img src="images/myphoto.jpg" alt="Profile Picture" width="100" height="100">
+        <nav class="discover-nav">
+            <a href="#">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Site Plan</a>
+            <a href="#">Form</a>
+        </nav>
     </header>
 
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="https://ooeze.github.io/wdd230/chamber/">Chamber</a></li>
-            <li><a href="site-plan.html">Site Plan</a></li>
-            <li><a href="contact.html">Form</a></li>
-        </ul>
-    </nav>
-
-    <main class="container">
+    <div class="discover-container">
         <aside class="sidebar">
-            <h2>Welcome!</h2>
-            <div id="visitMessage" class="visit-message">
-                <!-- Visit message will be inserted here by JavaScript -->
+            <div class="sidebar-section">
+                <h3>Welcome!</h3>
+                <div id="visitMessage" class="visit-message">
+                    <!-- Visit message will be inserted here by JavaScript -->
+                </div>
             </div>
 
             <!-- Demographics Section -->
@@ -88,7 +86,7 @@
             </section>
         </aside>
 
-        <section class="main-content">
+        <main class="main-content">
             <h2>Local Photos of Interest</h2>
 
             <div class="photo-gallery">
@@ -128,10 +126,10 @@
                     <figcaption>Technology Hub - Innovation and Progress in Aba</figcaption>
                 </figure>
             </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
-    <footer>
+    <footer class="discover-footer">
         <p>©️2025 Ezenwa Omaka Okoro 🗺️ Aba, Nigeria</p>
         <p id="lastModified"></p>
         <p>&copy; <span id="currentyear"></span> All Rights Reserved.</p>
