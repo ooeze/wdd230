@@ -2,10 +2,11 @@
 
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Okoro Ezenwa Omaka - WDD 230 - Web Frontend Development</title>
+    <title>Discover</title>
     <meta name="description"
         content="Discover the local attractions, events, and community highlights of our Chamber of Commerce. View our photo gallery showcasing the best of our area.">
     <meta name="author" content="Ezenwa Omaka Okoro">
@@ -24,6 +25,7 @@
     <script src="scripts/getDates.js" defer></script>
     <script src="scripts/visitCounter.js" defer></script>
     <script src="scripts/lazyload.js" defer></script>
+    <script src="scripts/hambugger.js" defer></script>
 
     <!-- Open Graph Meta Properties -->
     <meta property="og:title" content="Okoro Ezenwa Omaka - WDD 230 - Web Frontend Development">
@@ -35,15 +37,29 @@
 </head>
 
 <body>
-    <header class="discover-header">
-        <img src="images/myphoto.jpg" alt="Profile Picture" width="100" height="100">
-        <nav class="discover-nav">
+    <header>
+        <div class="logo">
+            <img src="images/images-removebg-preview.png" alt="Aba Chamber of Commerce">
+            <span>Aba Chamber of Commerce</span>
+        </div>
+        <nav class="desktop-nav">
             <a href="#">Home</a>
-            <a href="#">Chamber</a>
-            <a href="#">Site Plan</a>
-            <a href="#">Form</a>
+            <a href="#">Discover</a>
+            <a href="#">Directory</a>
+            <a href="#">Join</a>
         </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="#">Discover</a>
+        <a href="#">Directory</a>
+        <a href="#">Join</a>
+    </nav>
 
     <div class="discover-container">
         <aside class="sidebar">
@@ -89,42 +105,42 @@
         <main class="main-content">
             <h2>Local Photos of Interest</h2>
 
-            <div class="photo-gallery">
-                <figure class="gallery-item">
+            <div class="gallery">
+                <div class="gallery-item">
                     <img src="images/art.webp" data-src="images/art.webp" alt="Local Art Display" width="300"
                         height="200" loading="lazy">
                     <figcaption>Local Art Exhibition - Showcasing Aba's Creative Talent</figcaption>
-                </figure>
+                </div>
 
-                <figure class="gallery-item">
+                <div class="gallery-item">
                     <img src="images/car.webp" data-src="images/car.webp" alt="Modern Transportation" width="300"
                         height="200" loading="lazy">
                     <figcaption>Modern Transportation in Aba's Business District</figcaption>
-                </figure>
+                </div>
 
-                <figure class="gallery-item">
+                <div class="gallery-item">
                     <img src="images/dance.jpg" data-src="images/dance.jpg" alt="Cultural Dance Performance" width="300"
                         height="200" loading="lazy">
                     <figcaption>Traditional Dance Performance - Celebrating Our Heritage</figcaption>
-                </figure>
+                </div>
 
-                <figure class="gallery-item">
+                <div class="gallery-item">
                     <img src="images/pizza.webp" data-src="images/pizza.webp" alt="Local Cuisine" width="300"
                         height="200" loading="lazy">
                     <figcaption>Local Cuisine - A Taste of Aba's Food Scene</figcaption>
-                </figure>
+                </div>
 
-                <figure class="gallery-item">
+                <div class="gallery-item">
                     <img src="images/shop.webp" data-src="images/shop.webp" alt="Shopping Center" width="300"
                         height="200" loading="lazy">
                     <figcaption>Modern Shopping Center - Retail Excellence in Aba</figcaption>
-                </figure>
+                </div>
 
-                <figure class="gallery-item">
+                <div class="gallery-item">
                     <img src="images/tech.webp" data-src="images/tech.webp" alt="Technology Hub" width="300"
                         height="200" loading="lazy">
                     <figcaption>Technology Hub - Innovation and Progress in Aba</figcaption>
-                </figure>
+                </div>
             </div>
         </main>
     </div>
@@ -134,6 +150,8 @@
         <p id="lastModified"></p>
         <p>&copy; <span id="currentyear"></span> All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>

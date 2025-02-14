@@ -9,6 +9,7 @@
         content="Welcome to Aba Chamber of Commerce - Supporting local businesses and community growth">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/hambugger.js"></script>
 </head>
 
 <body>
@@ -17,14 +18,24 @@
             <img src="images/images-removebg-preview.png" alt="Aba Chamber of Commerce">
             <span>Aba Chamber of Commerce</span>
         </div>
-        <nav>
-
+        <nav class="desktop-nav">
             <a href="#">Home</a>
             <a href="#">Discover</a>
             <a href="#">Directory</a>
             <a href="#">Join</a>
         </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="#">Discover</a>
+        <a href="#">Directory</a>
+        <a href="#">Join</a>
+    </nav>
 
     <div class="banner">
         <img src="images/812D985E-2A66-46BA-80C6-73FEF87359DF-scaled.jpeg" alt="Timbuktu">
@@ -99,6 +110,7 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>

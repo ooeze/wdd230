@@ -16,12 +16,12 @@ h2 {
 
 }
 
-.card2 p{
+.card2 p {
     text-align: center;
     margin-top: 30px;
 }
 
-.card2 h2{
+.card2 h2 {
     margin-top: 30px;
 }
 
@@ -99,4 +99,75 @@ footer {
 
 span {
     font-size: xx-large;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .events,
+    .weather,
+    .member-spotlight {
+        margin: 20px 0;
+    }
+
+    .event-card,
+    .spotlight-card {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .weather-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-contact {
+        text-align: center;
+    }
+
+    /* Main section styles for mobile */
+    .main-section {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .main-section>* {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
 }
