@@ -15,7 +15,7 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, #1900ff 0%, #4a3aff 100%);
+    background: linear-gradient(135deg, #000066 0%, #000066 100%);
     color: white;
     padding: 1rem;
     display: flex;
@@ -232,7 +232,7 @@ footer p {
 /* Dark Mode Support for Header */
 @media (prefers-color-scheme: dark) {
     header {
-        background: linear-gradient(135deg, #1500c7 0%, #3628c7 100%);
+        background: linear-gradient(135deg, #000066 0%, #000066 100%);
     }
 
     header img {
@@ -338,13 +338,13 @@ img {
 
 /* Dark Mode Styles */
 body.darkMode {
-    background-color: #1a1a1a;
+    background-color: #000066;
     color: #fff;
 }
 
 /* Header Dark Mode */
 body.darkMode header {
-    background: linear-gradient(135deg, #000066 0%, #000099 100%);
+    background: linear-gradient(135deg, #000066 0%, #000066 100%);
 }
 
 /* Navigation Dark Mode */
@@ -373,7 +373,7 @@ body.darkMode a {
 }
 
 body.darkMode a:hover {
-    color: #99ccff;
+    color: #ffffff;
 }
 
 body.darkMode .hero .overlay {
@@ -399,8 +399,8 @@ footer {
 :root {
     --primary-color: #1900ff;
     --secondary-color: #f4f4f4;
-    --accent-color: #0066cc;
-    --text-color: #333;
+    --accent-color: #000066;
+    --text-color: #ffffff;
     --error-color: #dc3545;
     --success-color: #28a745;
     --border-radius: 8px;
