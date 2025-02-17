@@ -4,7 +4,7 @@
         "address": "123 Innovation Blvd, City, Country",
         "phone": "123-456-7890",
         "website": "https://technova.com",
-        "image": "technova.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Gold",
         "description": "Pioneers in cutting-edge technology solutions."
     },
@@ -13,7 +13,7 @@
         "address": "456 Eco Rd, City, Country",
         "phone": "987-654-3210",
         "website": "https://greenfuture.com",
-        "image": "greenfuture.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Silver",
         "description": "Leaders in sustainable and eco-friendly products."
     },
@@ -22,7 +22,7 @@
         "address": "789 Maple Ave, City, Country",
         "phone": "555-123-4567",
         "website": "https://katchyway.com",
-        "image": "katchyway.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Bronze",
         "description": "Innovative marketing solutions for small businesses."
     },
@@ -31,7 +31,7 @@
         "address": "321 Oak St, City, Country",
         "phone": "555-987-6543",
         "website": "https://xeamora.com",
-        "image": "xeamora.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Gold",
         "description": "Luxury fashion brand with a focus on sustainability."
     },
@@ -40,7 +40,7 @@
         "address": "654 Pine St, City, Country",
         "phone": "555-654-3210",
         "website": "https://joeibek.com",
-        "image": "joeibek.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Silver",
         "description": "Tech startup specializing in AI-driven solutions."
     },
@@ -49,7 +49,7 @@
         "address": "987 Cedar St, City, Country",
         "phone": "555-321-9876",
         "website": "https://enebrokes.com",
-        "image": "enebrokes.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "Bronze",
         "description": "Financial services with a personal touch."
     },
@@ -58,7 +58,7 @@
         "address": "159 Spruce St, City, Country",
         "phone": "555-789-1234",
         "website": "https://homieclean.com",
-        "image": "homieclean.png",
+        "image": "images-removebg-preview.png",
         "membershipLevel": "NP",
         "description": "Non-profit organization providing cleaning services to those in need."
     },
@@ -67,7 +67,7 @@
         "address": "753 Birch St, City, Country",
         "phone": "555-456-7890",
         "website": "https://velsis.com",
-        "image": "velsis.png",
+            "image": "images-removebg-preview.png",
         "membershipLevel": "Gold",
         "description": "Leading provider of innovative software solutions."
     }
