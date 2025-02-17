@@ -1,0 +1,74 @@
+[
+    {
+        "name": "TechNova",
+        "address": "123 Innovation Blvd, City, Country",
+        "phone": "123-456-7890",
+        "website": "https://technova.com",
+        "image": "technova.png",
+        "membershipLevel": "Gold",
+        "description": "Pioneers in cutting-edge technology solutions."
+    },
+    {
+        "name": "GreenFuture",
+        "address": "456 Eco Rd, City, Country",
+        "phone": "987-654-3210",
+        "website": "https://greenfuture.com",
+        "image": "greenfuture.png",
+        "membershipLevel": "Silver",
+        "description": "Leaders in sustainable and eco-friendly products."
+    },
+    {
+        "name": "Katchyway",
+        "address": "789 Maple Ave, City, Country",
+        "phone": "555-123-4567",
+        "website": "https://katchyway.com",
+        "image": "katchyway.png",
+        "membershipLevel": "Bronze",
+        "description": "Innovative marketing solutions for small businesses."
+    },
+    {
+        "name": "Xeamora",
+        "address": "321 Oak St, City, Country",
+        "phone": "555-987-6543",
+        "website": "https://xeamora.com",
+        "image": "xeamora.png",
+        "membershipLevel": "Gold",
+        "description": "Luxury fashion brand with a focus on sustainability."
+    },
+    {
+        "name": "Joeibek",
+        "address": "654 Pine St, City, Country",
+        "phone": "555-654-3210",
+        "website": "https://joeibek.com",
+        "image": "joeibek.png",
+        "membershipLevel": "Silver",
+        "description": "Tech startup specializing in AI-driven solutions."
+    },
+    {
+        "name": "Enebrokes",
+        "address": "987 Cedar St, City, Country",
+        "phone": "555-321-9876",
+        "website": "https://enebrokes.com",
+        "image": "enebrokes.png",
+        "membershipLevel": "Bronze",
+        "description": "Financial services with a personal touch."
+    },
+    {
+        "name": "Homie Clean",
+        "address": "159 Spruce St, City, Country",
+        "phone": "555-789-1234",
+        "website": "https://homieclean.com",
+        "image": "homieclean.png",
+        "membershipLevel": "NP",
+        "description": "Non-profit organization providing cleaning services to those in need."
+    },
+    {
+        "name": "Velsis",
+        "address": "753 Birch St, City, Country",
+        "phone": "555-456-7890",
+        "website": "https://velsis.com",
+        "image": "velsis.png",
+        "membershipLevel": "Gold",
+        "description": "Leading provider of innovative software solutions."
+    }
+]

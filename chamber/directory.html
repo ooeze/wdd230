@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <title>Business Directory</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
@@ -15,24 +15,41 @@
             <img src="images/images-removebg-preview.png" alt="Aba Chamber of Commerce">
             <span>Aba Chamber of Commerce</span>
         </div>
-        <h1>Thank You!</h1>
+        <h1>Aba Chamber of Commerce</h1>
+        <nav class="desktop-nav">
+            <a href="#">Home</a>
+            <a href="#">Discover</a>
+            <a href="#">Directory</a>
+            <a href="#">Join</a>
+        </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-
-    <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="discover.html">Discover</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="wdd230/chamber/discover.html">Discover</a>
+        <a href="#">Directory</a>
+        <a href="#">Join</a>
     </nav>
 
     <main>
-        <!-- Main content has been erased -->
+        <h1>Business Directory</h1>
+        <div class="view-toggle">
+            <button id="gridView" class="active">🔲</button>
+            <button id="listView">📋</button>
+        </div>
+        <div id="memberContainer" class="grid-view">
+            <!-- Member cards will be inserted here -->
+        </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo.webp" alt="Aba Chamber Logo" width="60" height="60">
+                <img src="images/images-removebg-preview.png" alt="Aba Chamber Logo" width="60" height="60">
                 <div class="footer-address">
                     <h2>Aba Chamber of Commerce</h2>
                     <p>No 2 Aforule road</p>
@@ -49,6 +66,8 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+    <script src="scripts/directory.js"></script>
 </body>
 
 </html>
