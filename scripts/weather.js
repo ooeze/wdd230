@@ -1,7 +1,7 @@
 // Select HTML elements in the document
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('#weather-desc');
+const captionDesc = document.querySelector('figcaption');
 
 // Declare the URL for the OpenWeatherMap API
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=fa11bf6462ba993532ee5994fb095f22';

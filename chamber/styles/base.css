@@ -327,3 +327,52 @@ figcaption {
     height: auto;
     display: block;
 }
+
+/* Styles specific to the membership form */
+.membership-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.membership-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form select,
+.membership-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.membership-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.membership-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}

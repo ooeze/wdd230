@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Application Form</title>
+    <meta name="description"
+        content="Welcome to Aba Chamber of Commerce - Supporting local businesses and community growth">
+    <meta name="author" content="Ezenwa Omaka Okoro">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aba Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://assets.churchofjesuschrist.org/b8/19/b819ab8ebea1cfd146a19114b446624043d27df5/lehis_dream_jerry_thompson.jpeg">
+    <meta property="og:url" content="https://yourwebsite.com">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/images-removebg-preview.png" alt="Aba Chamber of Commerce">
+            <span>Aba Chamber of Commerce</span>
+        </div>
+        <h1>Aba Chamber of Commerce</h1>
+        <nav class="desktop-nav">
+            <a href="#">Home</a>
+            <a href="#">Discover</a>
+            <a href="#">Directory</a>
+            <a href="#">Join</a>
+        </nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="#">Home</a>
+        <a href="wdd230/chamber/discover.html">Discover</a>
+        <a href="#">Directory</a>
+        <a href="#">Join</a>
+    </nav>
+
+    <main class="form-container">
+        <section class="form-section">
+            <h1>Membership Application Form</h1>
+            <form class="membership-form" method="get" action="thankyou.html">
+                <label for="first-name">First Name:
+                    <input type="text" id="first-name" name="first-name" required>
+                </label>
+
+                <label for="last-name">Last Name:
+                    <input type="text" id="last-name" name="last-name" required>
+                </label>
+
+                <label for="title">Title/Position:
+                    <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}"
+                        title="Only letters, hyphens, and spaces are allowed, with a minimum of 7 characters.">
+                </label>
+
+                <label for="email">Email:
+                    <input type="email" id="email" name="email" required placeholder="example@example.com">
+                </label>
+
+                <label for="phone">Mobile Phone:
+                    <input type="tel" id="phone" name="phone" required>
+                </label>
+
+                <label for="organization-name">Organization Name:
+                    <input type="text" id="organization-name" name="organization-name" required>
+                </label>
+
+                <label for="membership-level">Membership Level:
+                    <select id="membership-level" name="membership-level">
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label for="description">Business/Organization Description:
+                    <textarea id="description" name="description"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <input type="submit" value="Submit Application">
+            </form>
+        </section>
+
+        <aside class="benefits-section">
+            <h2>Membership Benefits</h2>
+            <ul>
+                <li><strong>NP Membership:</strong> Access to networking events, basic training sessions.</li>
+                <li><strong>Bronze Membership:</strong> Includes NP benefits plus advertising opportunities.</li>
+                <li><strong>Silver Membership:</strong> Includes Bronze benefits plus event discounts.</li>
+                <li><strong>Gold Membership:</strong> Includes Silver benefits plus premium spotlight positions.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/images-removebg-preview.png" alt="Aba Chamber Logo" width="60" height="60">
+                <div class="footer-address">
+                    <h2>Aba Chamber of Commerce</h2>
+                    <p>No 2 Aforule road</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>info@acoc.info</p>
+                <p>+(224) 4321-4326</p>
+                <a href="#">📍 Location Map</a>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2025 Aba Chamber of commerce | Ezenwa-Omaka-Okoro | WDD 230 Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="scripts/hambugger.js"></script>
+    <script>
+        // Set the current timestamp when the form is loaded
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+</body>
+
+</html>
