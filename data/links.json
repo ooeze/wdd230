@@ -1,0 +1,40 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          { "url": "week01/holygrail.html", "title": "HG Layout" },
+          { "url": "week01/media-query.html", "title": "mQueries" }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          { "url": "week02/flexbox.html", "title": "Flexbox Practice" },
+          { "url": "week02/grid.html", "title": "CSS Grid" }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          { "url": "week03/forms.html", "title": "HTML Forms" },
+          { "url": "week03/responsive-nav.html", "title": "Responsive Navigation" }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          { "url": "week04/javascript.html", "title": "JavaScript Basics" },
+          { "url": "week04/objects.html", "title": "Working with Objects" }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          { "url": "week05/fetch-api.html", "title": "Fetch API" },
+          { "url": "week05/json.html", "title": "Handling JSON Data" }
+        ]
+      }
+    ]
+  }
+  
